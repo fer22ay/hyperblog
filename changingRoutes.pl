@@ -18,7 +18,8 @@ __DATA__
 <p>This is <%= ucfirst $name %>.</p>
 
 @@ home.html.ep
-<p>Welcome to The North Pole!</p>
+<h1>Home</h1>
+<p>Bienvenido al polo norte!</p>
 
 <p>
 	Say hi to <%= link_to 'Santa' => staff => {name => 'santa'} %>
