@@ -12,7 +12,7 @@ app->start;
 __DATA__
 
 @@ toy.html.ep
-<p>Look at this amazing <%= $toy_name %>.</p>
+<p>Mira esto increible <%= $toy_name %>.</p>
 
 @@ staff.html.ep
 <p>This is <%= ucfirst $name %>.</p>
