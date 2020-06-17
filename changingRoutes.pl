@@ -1,6 +1,8 @@
 #!/usr/bin/perl
 
 use Mojolicious::Lite;
+use strict;
+use warnings;
 
 get '/toy/:toy_name' => {template => 'toy'} => 'toy';
 get '/meet/:name' => {template => 'staff'} => 'staff';
