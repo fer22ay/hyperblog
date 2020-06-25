@@ -22,7 +22,7 @@ __DATA__
 @@ home.html.ep
 <head>
 	<title>Perl Home</title>
-	<link rel="stylesheet" href="/estilos.css"/>
+	<link rel="stylesheet" href="css/estilos.css"/>
 </head>
 <body>
 <div id="container">
