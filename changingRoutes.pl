@@ -20,9 +20,19 @@ __DATA__
 <p>This is <%= ucfirst $name %>.</p>
 
 @@ home.html.ep
-<h1>Home</h1>
-<p>Bienvenido al polo norte!</p>
-
+<html>
+<head>
+	<title>Perl Home</title>
+	<link rel="stylesheet" href="Mojolicious/estilos.css"/>
+</head>
+<body>
+<div id="container">
+	<div id="post">
+		<h1>Este es el titiulo atractivo e interesante del post</h1>
+		<p>Y este es el parrafo de inicio donde vamos a explicar las cosas increibles que se pueden hacer
+		con ramas!</p>
+	</div>
+</div>
 <p>
 	Say hi to <%= link_to 'Santa' => staff => {name => 'santa'} %>
 	and <%= link_to 'Rudolph' => staff => {name => 'rudolph'} %>
@@ -32,3 +42,5 @@ __DATA__
 	And just wait until you see our amazing
 	<%= link_to 'new puzzle' => toy => {toy_name => 'puzzle'} %>!
 </p>
+</body>
+</html>
