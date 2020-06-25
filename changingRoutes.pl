@@ -20,10 +20,9 @@ __DATA__
 <p>This is <%= ucfirst $name %>.</p>
 
 @@ home.html.ep
-<html>
 <head>
 	<title>Perl Home</title>
-	<link rel="stylesheet" href="Mojolicious/estilos.css"/>
+	<link rel="stylesheet" href="/estilos.css"/>
 </head>
 <body>
 <div id="container">
@@ -43,4 +42,3 @@ __DATA__
 	<%= link_to 'new puzzle' => toy => {toy_name => 'puzzle'} %>!
 </p>
 </body>
-</html>
