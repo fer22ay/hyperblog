@@ -6,7 +6,7 @@ use warnings;
 
 get '/toy/:toy_name' => {template => 'toy'} => 'toy';
 get '/meet/:name' => {template => 'staff'} => 'staff';
-get '/' => {template => 'home'} => 'home';
+get '/' => {template => 'home', format=> 'html'} => 'home';
 
 
 app->start;
@@ -20,15 +20,19 @@ __DATA__
 <p>This is <%= ucfirst $name %>.</p>
 
 @@ home.html.ep
-<h1>Home</h1>
-<p>Bienvenido al polo norte!</p>
+<html>
+<head>
+	<title>Perl Home</title>
+</head>
+		<p>Y este es el parrafo de inicio donde vamos a explicar las cosas increibles que se pueden hacer
+		con ramas!</p>
+	<p>
+		Say hi to <%= link_to 'Santa' => staff => {name => 'santa'} %>
+		and <%= link_to 'Rudolph' => staff => {name => 'rudolph'} %>
+	</p>
 
-<p>
-	Say hi to <%= link_to 'Santa' => staff => {name => 'santa'} %>
-	and <%= link_to 'Rudolph' => staff => {name => 'rudolph'} %>
-</p>
-
-<p>
-	And just wait until you see our amazing
-	<%= link_to 'new puzzle' => toy => {toy_name => 'puzzle'} %>!
-</p>
+	<p>
+		And just wait until you see our amazing
+		<%= link_to 'new puzzle' => toy => {toy_name => 'puzzle'} %>!
+	</p>
+</html>
